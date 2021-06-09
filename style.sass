@@ -1,0 +1,298 @@
+@font-face
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 600
+  src: url('/fonts/Montserrat/Montserrat-Bold.ttf') format('ttf')
+  src: url('/fonts/Montserrat/Montserrat-Bold.woff') format('woff')
+  src: url('/fonts/Montserrat/Montserrat-Bold.woff2') format('woff2')
+  src: url('/fonts/Montserrat/Montserrat-Bold.eot') format('eot')
+
+@font-face
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 700
+  src: url("/fonts/Montserrat/Montserrat-SemiBold.ttf") format("ttf")
+  src: url("/fonts/Montserrat/Montserrat-SemiBold.woff") format("woff")
+  src: url("/fonts/Montserrat/Montserrat-SemiBold.woff2") format("woff2")
+  src: url("/fonts/Montserrat/Montserrat-SemiBold.eot") format("eot")
+
+@font-face
+  font-family: Montserrat
+  font-style: normal
+  font-weight: 800
+  src: url("/fonts/Montserrat/Montserrat-ExtraBold.ttf") format("ttf")
+  src: url("/fonts/Montserrat/Montserrat-ExtraBold.woff") format("woff")
+  src: url("/fonts/Montserrat/Montserrat-ExtraBold.woff2") format("woff2")
+  src: url("/fonts/Montserrat/Montserrat-ExtraBold.eot") format("eot")
+
+*
+  margin: 0
+  padding: 0
+  border: none
+  outline: none
+  text-decoration: none
+  background-color: transparent
+
+html,
+body
+  font-family: 'Montserrat', sans-serif
+  height: 100%
+
+.wrapper
+  display: flex
+  flex-direction: column
+  min-height: 100%
+
+.content
+  flex: 1 0 auto
+
+.container
+  max-width: 100%
+  margin: 0 auto
+  padding: 0 20px
+
+.header
+  margin-top: 40px
+  &__text
+    display: flex
+    justify-content: space-between
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    color: #212121
+  &__img720
+    display: none
+  &__img_padding
+    padding: 0 40px
+
+
+.img__circle
+  background-color: #428A60
+  position: relative
+  max-width: 350px
+  min-width: 202px
+  margin: 10px auto 0
+  border-radius: 50%
+  &:before
+    content: ""
+    display: block
+    padding-top: 100%
+  &>img
+    top: 22%
+    left: 0
+    position: absolute
+    max-width: 107%
+    height: auto
+// Стили для статической картинки, которая будет постоянно 202х202px, а не увеличиваться с разрешением экрана
+//.img__circle
+//  position: relative
+//  margin: 10px auto 0
+//  background-color: #428A60
+//  width: 202px
+//  height: 202px
+//  display: flex
+//  align-items: center
+//  justify-content: center
+//  border-radius: 50%
+//  &>img
+//    position: absolute
+//    height: 122px
+//    width: 223px
+//    top: calc(50% - (122px/2))
+
+.h1
+  margin-top: 37px
+  font-weight: 800
+  font-size: 30px
+  line-height: 39px
+  text-align: center
+  color: #212121
+
+.form
+  padding-top: 8px
+  &__div
+    margin-top: 20px
+    &_phone
+      display: flex
+      align-items: flex-end
+      position: relative
+  &__input
+    width: 100%
+    background: #F8F8F8
+    border: 1px solid #E4E4E4
+    box-sizing: border-box
+    border-radius: 5px
+    padding: 16px 10px
+    margin-top: 10px
+    &::placeholder
+      opacity: 0.2
+      font-weight: 600
+  &__button
+    margin-top: 28px
+    width: 100%
+    background-color: #428A60
+    padding: 12px 20px
+    font-weight: 600
+    font-size: 14px
+    line-height: 18px
+    text-align: center
+    color: #FFFFFF
+    border-radius: 5px
+
+.options__block
+  position: absolute
+  right: 0
+  bottom: 0
+  &_hide
+    display: none
+  & .option:hover
+    background-color: #fff
+
+.option
+  cursor: pointer
+  display: flex
+  align-items: center
+  padding: 14px 28px 14px 10px
+  background: #F8F8F8
+  border: 1px solid #E4E4E4
+  box-sizing: border-box
+  border-radius: 5px
+  max-width: 100px
+  &__selected
+    margin-left: 20px
+    position: relative
+    cursor: pointer
+  &-arrow
+    width: 8px
+    height: 4px
+    position: absolute
+    right: 10px
+    top: calc(50% - 2px)
+    &_rotate
+      transform: rotate(90deg)
+
+.flag
+  margin-left: 10px
+  width: 26px
+  height: 18px
+  &-name
+    font-weight: 600
+    flex: 0 0 50%
+    overflow: hidden
+
+label
+  font-weight: 800
+  font-size: 12px
+  line-height: 16px
+  text-transform: uppercase
+  color: #212121
+  width: 100%
+
+.text_green
+  color: #428A60
+
+.button__img
+  margin-left: 10px
+
+.footer
+  margin-top: 20px
+  background: #F8F8F8
+  padding: 11px 0
+  &__text
+    font-weight: bold
+    font-size: 14px
+    line-height: 18px
+    text-align: center
+    color: #212121
+  & img
+    margin: 0 20px
+
+select > img
+  height: 20px
+  width: 20px
+  z-index: 20
+
+@media screen and (min-width: 1280px)
+  html,
+  body
+    height: 100%
+
+  .wrapper
+    max-width: 1280px
+    margin: 0 auto
+    height: auto
+    justify-content: center
+
+  .container
+    padding: 0
+
+  .header
+    position: relative
+    margin-top: 0
+    display: flex
+    background: linear-gradient(180deg, #428A60 0%, #35734F 100%)
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.1)
+    border-radius: 1px
+    padding: 40px
+    overflow: hidden
+    &__text
+      color: #fff
+      flex-direction: column
+      z-index: 1
+    &__img
+      display: none
+    &__img720
+      display: block
+    &__img720 img
+      max-width: 465px
+      height: auto
+      width: 100%
+      position: absolute
+      bottom: 40px
+      left: 57px
+
+  .circle
+    width: 398px
+    height: 398px
+    position: absolute
+    left: 20px
+    bottom: 40px
+    background-color: #428A60
+    border-radius: 50%
+    z-index: 0
+    &_big
+      width: 688px
+      height: 688px
+      background-color: transparent
+      z-index: 0
+      position: absolute
+      left: 235px
+      top: calc(50% - (688px/2))
+      border-radius: 50%
+      border: 20px solid #428A60
+
+  .content
+    border-top-right-radius: 30px
+    display: flex
+    flex: 0 0 auto
+    box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.1)
+
+  .flex50
+    flex: 1 1 50%
+
+  .h1
+    padding: 29px 128px
+    margin-top: 0
+    background: #F8F8F8
+    border-top-right-radius: 30px
+
+  .form
+    padding: 32px 123px 60px
+    &__container
+      background: #FFFFFF
+      border-top-right-radius: 30px
+    &__button
+      margin-top: 38px
+
+  .footer
+    display: none
